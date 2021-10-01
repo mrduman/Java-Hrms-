@@ -24,7 +24,7 @@ public class UserManager implements UserService{
 	@Override
 	public Result emailControl(String email) {
 		
-		List<User> users = this.userDao.findByEmail(email);
+	 List<User> users = this.userDao.getByEmail(email);
 		
 		if(!(users.isEmpty())) {
 			
@@ -33,5 +33,6 @@ public class UserManager implements UserService{
 		
 		return new SuccessResult();
 	}
+
 
 }

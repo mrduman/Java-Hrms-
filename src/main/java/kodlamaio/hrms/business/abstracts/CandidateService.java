@@ -12,5 +12,5 @@ public interface CandidateService {
 	DataResult<List<Candidate>> getAll();
 	Result add(RegisterForCandidateDTO candidate);
 	Result identityNumberControl(String identityNumber);
-	Result isEmailVerified(String email);
+	Result isEmailVerified(int id);
 }

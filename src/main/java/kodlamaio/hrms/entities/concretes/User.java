@@ -10,6 +10,8 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -33,15 +35,19 @@ public class User {
 	
     @Email(message = "Email should be valid")
 	@Column(name="email")
-	private String eMail;
+	@NotNull(message = "Name can not be Null")
+	@NotBlank
+	private String email;
 	
 	@Column(name="password")
+	@NotNull(message = "Name can not be Null")
+	@NotBlank
 	private String password;
 	
 	public User (String email, String password) {
 		
 		
-		this.eMail=email;
+		this.email=email;
 		this.password=password;
 	}
 

@@ -12,7 +12,10 @@ public interface EmployerService {
 	DataResult<List<Employer>> getAll();
 
 	Result add(RegisterForEmployerDTO employer);
-	Result isEmailVerified(String email);
+	Result isEmailVerified(int id);
+	Result isVerifiedByEmployee(int id);
+
+
 }
 
 
