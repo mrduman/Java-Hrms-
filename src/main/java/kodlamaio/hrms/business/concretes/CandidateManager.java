@@ -45,7 +45,7 @@ public class CandidateManager implements CandidateService{
 	public Result add(RegisterForCandidateDTO candidate) {
 
 		Result result = BusinessRule.run(checkPasswordsMatch(candidate),identityNumberControl(candidate.getIdentityNumber()),
-				emailControl(candidate)); // Burada neden candidate.getIdentityNumber() yazdık.!!!
+				emailControl(candidate));
 
 		if(!result.isSuccess()){
 			return result;
