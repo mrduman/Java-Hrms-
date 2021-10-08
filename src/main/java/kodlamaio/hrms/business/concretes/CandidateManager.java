@@ -23,7 +23,7 @@ import kodlamaio.hrms.entities.concretes.Candidate;
 public class CandidateManager implements CandidateService{
 
 	private CandidateDao candidateDao;
-	private UserService userService;
+	private UserService  userService;
 
 	
 
