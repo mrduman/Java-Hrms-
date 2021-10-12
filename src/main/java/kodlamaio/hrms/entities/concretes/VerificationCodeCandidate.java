@@ -9,7 +9,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
+//@Data
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
@@ -22,4 +22,20 @@ public class VerificationCodeCandidate extends VerificationCode{
 	
 	@Column(name = "candidate_id")
 	private int candidateId;
+
+	public int getVerificationCodeId() {
+		return verificationCodeId;
+	}
+
+	public void setVerificationCodeId(int verificationCodeId) {
+		this.verificationCodeId = verificationCodeId;
+	}
+
+	public int getCandidateId() {
+		return candidateId;
+	}
+
+	public void setCandidateId(int candidateId) {
+		this.candidateId = candidateId;
+	}
 }

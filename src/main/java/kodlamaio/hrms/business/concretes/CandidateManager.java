@@ -22,12 +22,13 @@ import kodlamaio.hrms.entities.concretes.Candidate;
 @Service
 public class CandidateManager implements CandidateService{
 
-	private CandidateDao candidateDao;
-	private UserService  userService;
+
+	private final CandidateDao candidateDao;
+	private final UserService  userService;
 
 	
 
-	@Autowired
+	//@Autowired
 	public CandidateManager(CandidateDao candidateDao , UserService userService) {
 		super();
 		this.candidateDao = candidateDao;
